@@ -65,4 +65,16 @@ function insert_meta_in_head() {
 
 add_action( 'wp_head', 'insert_meta_in_head', 5 );
 
+/* If you have this strings in your <head> tag, please comment this function */
+function doctype_opengraph($output) {
+    return $output . '
+    prefix="
+      og: http://ogp.me/ns# 
+      fb: http://ogp.me/ns/fb# 
+      video: http://ogp.me/ns/video#
+    "';
+}
+
+add_filter('language_attributes', 'doctype_opengraph');
+
 ?>
