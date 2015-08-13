@@ -10,7 +10,7 @@ Author URI: https://github.com/repzy
 function save_video_meta( $post_id, $post ) {
 
   preg_match('~
-        # Match non-linked youtube URL in the wild. (Rev:20130823)
+        # Match non-linked youtube URL in the wild. (Rev:20130823)    
         https?://         # Required scheme. Either http or https.
         (?:[0-9A-Z-]+\.)? # Optional subdomain.
         (?:               # Group host alternatives.
